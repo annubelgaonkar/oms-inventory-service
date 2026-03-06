@@ -1,9 +1,5 @@
-
-#spring.application.name=
-
 server:
   port: 8083
-
 
 spring:
   application:
@@ -23,3 +19,18 @@ spring:
     host: localhost
     port: 6379
 
+  cloud:
+    aws:
+      sqs:
+        endpoint: http://localhost:4566
+
+cloud:
+  aws:
+    region:
+      static: us-east-1
+    credentials:
+      access-key: test
+      secret-key: test
+
+sqs:
+  payment-failed-queue: payment-failed-queue

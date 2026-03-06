@@ -33,7 +33,4 @@ public class InventoryController {
     public ResponseEntity<Integer> getAvailable(@PathVariable UUID productId){
         return ResponseEntity.ok().body(inventoryService.getAvailableStock(productId));
     }
-
-
-
 }
